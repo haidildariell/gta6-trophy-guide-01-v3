@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="sub">GTA VI · PS5 · 55 trophies · every step cited</p>
+  </div>
+  <div class="progressbox">
+    <div class="earnedline"><strong id="earnedCount">0/55</strong> earned · <span id="pointsLine">P 0/1 · G 0/2 · S 0/6 · B 0/46</span> · <span id="totalPoints">0 pts</span></div>
+    <div class="bar"><div id="progressBar"></div></div>
+    <div class="headcontrols">
+      <label class="switch"><input type="checkbox" id="spoilerToggle"> Spoiler shield</label>
+      <button id="exportBtn" type="button">Export</button>
+      <label class="importbtn">Import<input id="importFile" type="file" accept="application/json" hidden></label>
+      <button id="resetBtn" type="button">Reset</button>
+      <span class="saved" id="savedNote">Saved in this browser</span>
+    </div>
+  </div>
+</header>
+<div class="audit" id="auditStrip">Loading audit…</div>
+<nav class="tabs">
+  <button type="button" data-view="ledger" class="tab active">Tracker</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap</button>
+  <button type="button" data-view="missables" class="tab">Missables</button>
+  <button type="button" data-view="sources" class="tab">Sources</button>
+</nav>
+<main id="view"></main>
+<footer>
+  <p>Every guide here is written in our own words; numbered citations point to the source each step came from. Trophy names, descriptions and grades are the official PlayStation list. No Rockstar logo or artwork is used. This guide works fully offline — progress is saved only in this browser.</p>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

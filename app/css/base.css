@@ -1,0 +1,89 @@
+/* Leonida Legend — paper-light, dense, serif display type. System fonts only, fully offline. */
+:root{
+  --paper:#f7f2e7; --paper2:#fffdf6; --ink:#221d15; --muted:#6f6450;
+  --line:#ddd2ba; --accent:#9a3b1e; --accent2:#1e5c4a;
+  --plat:#7a5aa8; --gold:#a87b12; --silver:#6d7680; --bronze:#9c5a24;
+  --warn:#8a5a00; --warnbg:#fdf0d0; --bad:#8c1d1d; --badbg:#fbe3dd; --okbg:#e2efe4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:13px/1.45 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;padding:10px 12px 18px}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif}
+.topbar{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.brand h1{font-size:30px;margin:0;letter-spacing:.5px}
+.sub{margin:2px 0 0;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.2px}
+.progressbox{min-width:430px;text-align:right}
+.earnedline{font-size:13px}
+.earnedline strong{font-size:18px}
+.bar{height:10px;background:#e7dcc2;border:1px solid var(--line);margin:5px 0}
+#progressBar{height:100%;width:0;background:var(--accent2);transition:width .2s}
+.headcontrols{display:flex;gap:6px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+button,.importbtn{background:var(--paper2);border:1px solid var(--ink);color:var(--ink);padding:3px 9px;cursor:pointer;font-size:12px;border-radius:2px}
+button:hover,.importbtn:hover{background:#efe5cb}
+.saved{color:var(--muted);font-size:11px;font-style:italic}
+.switch{font-size:12px;display:flex;gap:4px;align-items:center}
+.audit{margin:8px 0;padding:6px 9px;background:var(--ink);color:#f3ead2;font-size:12px;letter-spacing:.2px}
+.tabs{display:flex;gap:4px;margin:6px 0 10px}
+.tab{font-size:13px;padding:5px 14px}
+.tab.active{background:var(--ink);color:#f7f2e7}
+footer{margin-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+/* Ledger 3-pane */
+.ledger{display:grid;grid-template-columns:348px 1fr 262px;gap:10px;align-items:start}
+.pane{background:var(--paper2);border:1px solid var(--line);padding:8px}
+.pane h2{font-size:15px;margin:0 0 6px}
+.pane h3{font-size:13px;margin:10px 0 4px}
+input[type=search],textarea,select{width:100%;padding:5px;border:1px solid var(--line);background:#fff;font:inherit;font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0}
+.chip{font-size:11px;padding:2px 7px;border-radius:20px}
+.chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.grades{display:flex;gap:3px;margin-bottom:6px}
+.tlist{display:flex;flex-direction:column}
+.trow{display:grid;grid-template-columns:18px 22px 1fr;gap:5px;padding:5px 4px;border-bottom:1px solid #eee3c8;cursor:pointer;align-items:start}
+.trow:hover{background:#faf3dd}
+.trow.sel{background:#f3e8c8;outline:1px solid var(--accent)}
+.trow .nm{font-weight:600;font-size:12.5px}
+.trow .ds{color:var(--muted);font-size:11.5px}
+.badge{display:inline-block;text-align:center;font-weight:700;font-size:11px;color:#fff;border-radius:2px;padding:1px 0}
+.b-platinum{background:var(--plat)} .b-gold{background:var(--gold)} .b-silver{background:var(--silver)} .b-bronze{background:var(--bronze)}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.4px;border:1px solid var(--muted);color:var(--muted);padding:0 3px;margin-right:3px;border-radius:2px;vertical-align:1px}
+.tag.miss{border-color:var(--bad);color:var(--bad)}
+.tag.disp{border-color:var(--accent);color:var(--accent)}
+.srcn{color:var(--muted);font-size:10.5px;white-space:nowrap}
+.detail h2{font-size:21px;margin:0}
+.official{font-style:italic;color:#463d2c;border-left:3px solid var(--accent);padding:2px 8px;margin:6px 0;background:#faf3dd}
+.meta{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0}
+.meta span{border:1px solid var(--line);padding:1px 7px;font-size:11px;background:#fff}
+.missbox{padding:6px 9px;margin:7px 0;font-size:12px;border:1px solid}
+.missbox.possibly{background:var(--badbg);border-color:var(--bad)}
+.missbox.watch{background:var(--warnbg);border-color:var(--warn)}
+.missbox.unconfirmed{background:#ece7da;border-color:var(--muted)}
+.dispute{border:2px solid var(--accent);padding:8px;margin:8px 0;background:#fff8ec}
+.dispute h3{margin:0 0 5px;color:var(--accent);font-size:13px;letter-spacing:.5px}
+.dispute .cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dispute .col{background:#fff;border:1px solid var(--line);padding:6px;font-size:12px}
+.dispute .call{margin-top:6px;font-size:12.5px}
+.counter{display:flex;align-items:center;gap:8px;margin:8px 0;background:var(--okbg);border:1px solid var(--accent2);padding:6px 9px}
+.counter b{font-size:16px}
+.counter button{width:28px;height:28px;font-size:15px}
+.steps{margin:4px 0;padding-left:20px}
+.steps li{margin:5px 0}
+.cite{color:var(--accent);font-weight:700;font-size:11px}
+.gsrc{font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:5px;margin-top:8px}
+.nextup{margin:0;padding-left:16px}
+.nextup li{margin:4px 0;cursor:pointer}
+.nextup li:hover{text-decoration:underline}
+.rail-src{font-size:11.5px;margin:5px 0;border-bottom:1px dotted var(--line);padding-bottom:4px}
+.sealed{letter-spacing:2px;color:var(--muted);font-weight:700}
+/* Roadmap / missables / sources */
+.stage{background:var(--paper2);border:1px solid var(--line);padding:8px 10px;margin-bottom:8px}
+.stage h2{font-size:16px;margin:0 0 2px}
+.stage .bar{margin:4px 0}
+.stage ul{margin:4px 0;padding-left:18px}
+.boards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+.board{background:var(--paper2);border:1px solid var(--line);padding:8px}
+.board h2{font-size:15px;margin:0 0 6px}
+.mcard{border-bottom:1px solid #eee3c8;padding:5px 0;font-size:12px}
+table.src{width:100%;border-collapse:collapse;background:var(--paper2)}
+table.src td,table.src th{border:1px solid var(--line);padding:5px 7px;text-align:left;font-size:12px;vertical-align:top}
+.url{word-break:break-all;color:var(--accent2)}
+.small{font-size:11px;color:var(--muted)}
